@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #00a651;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --accent-color: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #00854a 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-brand i {
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #00854a 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.btn-primary-custom {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    border: none;
+    padding: 12px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+    background-color: #ffb300;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* VANTAGENS SECTION */
+.vantagens {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.vantagens h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.card-vantagem {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-vantagem:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-vantagem .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.card-vantagem h5 {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.card-vantagem p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+footer h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        margin-bottom: 1rem;
+    }
+
+    .vantagens {
+        padding: 60px 0;
+    }
+
+    .vantagens h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-vantagem {
+        margin-bottom: 1.5rem;
+    }
+}
